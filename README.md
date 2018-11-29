@@ -27,3 +27,24 @@ journactl -u gluster-pv -f
 
 When the service run, simply install a Helm Chart the requiere some PVs, and GlusterPV-Provisioner will create them for you. 
 
+### Configuration
+
+The configuration is in the first lines of the script : 
+
+```
+#!/bin/bash                                                                                                        
+
+# a mandatory name to indentify your Gluster server       
+glusterName='glusterfs-cluster'   
+
+# the IP where Kubernetes will mount your Gluster volume (for H/A use a shared IP) 
+glusterEP='192.168.42.42'         
+
+# the patf all nodes of your Gluster cluster (use just one in a single-node context) 
+glusterClusterPath='192.168.42.42:/gluster-pool 192.168.42.43:/gluster-pool'            
+
+# the pth of 
+kubeConfigPath=/root/.kube/config                                                                                  
+                                      
+```
+
