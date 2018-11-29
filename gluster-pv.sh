@@ -27,11 +27,9 @@ while true; do
 
 			# Let's create the volume
                         echo "Let's create a Gluster volume ($volume) ..."
-                        gluster volume create "$volume" \
-                               replica $glusterNodesNumber transport tcp \
-                               "$glusterClusterPath"
-
-                        if [[ "$?" != "0" ]]; then
+                        
+                        if ! gluster volume create "$volume" replica $glusterNodesNumber transport tcp "$glusterClusterPath"
+			then
                                 echo "Volume creation error !"
                                 exit 1
                         fi
