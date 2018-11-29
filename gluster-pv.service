@@ -1,0 +1,6 @@
+[Unit]
+After=glusterd.service
+
+[Service]
+ExecStart=/srv/scripts/gluster-pv.sh
+
