@@ -5,6 +5,15 @@ A simple shell script in 100 line of bash to watch the Kubernetes API for `Pendi
 
 This service is made  to run on your external GlusterFS cluster (or single server) but you can embed it in your Docker Gluster's container to enable Auto-PV creation within your Kubernetes cluster. 
 
+### Require 
+
+To run this service you will need the following packages :
+
+```
+jq
+kubectl
+glusterfs-server
+```
 ### Installation
 
 ```
