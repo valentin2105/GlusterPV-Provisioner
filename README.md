@@ -40,11 +40,14 @@ glusterName='glusterfs-cluster'  
 # the IP where Kubernetes will mount your Gluster volume (for H/A use a shared IP) 
 glusterEP='192.168.42.42'         
 
-# the patf all nodes of your Gluster cluster (use just one in a single-node context) 
+# the path of all nodes in your Gluster cluster (use just one in a single-node context) 
 glusterClusterPath='192.168.42.42:/gluster-pool 192.168.42.43:/gluster-pool'            
 
-# the pth of 
+# the path of the kubeconfig file 
 kubeConfigPath=/root/.kube/config                                                                                  
                                       
 ```
 
+### Future
+
+I'm currently working to rewrite this in Golang, if someone want help, it would be awesome. 
