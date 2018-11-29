@@ -43,6 +43,9 @@ glusterEP='192.168.42.42'        
 # the path of all nodes in your Gluster cluster (use just one in a single-node context)
 glusterClusterPath='192.168.42.42:/gluster-pool 192.168.42.43:/gluster-pool' 
 
+# the total node Number (number of replicas for your volume) 
+glusterNodesNumber=2
+
 # the path of the kubeconfig file 
 kubeConfigPath=/root/.kube/config
 ```
