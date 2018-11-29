@@ -1,9 +1,10 @@
 #!/bin/bash
 
-glusterName='glusterfs-cluster'
-glusterEP='192.168.42.42'
-glusterClusterPath='192.168.42.42:/gluster-pool 192.168.42.43:/gluster-pool'
+glusterName=glusterfs-cluster
+glusterEP=192.168.1.10
 glusterNodesNumber=2
+glusterNode01Path=192.168.1.10:/gluster-pool
+glusterNode02Path=192.168.1.11:/gluster-pool  
 kubeConfigPath=/root/.kube/config
 
 while true; do
@@ -28,7 +29,7 @@ while true; do
 			# Let's create the volume
                         echo "Let's create a Gluster volume ($volume) ..."
                         
-                        if ! gluster volume create "$volume" replica $glusterNodesNumber transport tcp "$glusterClusterPath"
+                        if ! gluster volume create $volume replica $glusterNodesNumber transport tcp  $glusterNode01Path/$volume $glusterNode02Path/$volume
 			then
                                 echo "Volume creation error !"
                                 exit 1
