@@ -45,7 +45,7 @@ The configuration is in the first lines of the script :
 ```
 #!/bin/bash
 
-# a mandatory name to indentify your Gluster server       
+# a mandatory name to identify your Gluster server       
 glusterName='glusterfs-cluster'   
 
 # the IP where Kubernetes will mount your Gluster volume (for H/A use a shared IP) 
