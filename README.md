@@ -32,7 +32,7 @@ When the service run, simply install a Helm Chart the requiere some PVs, and Glu
 The configuration is in the first lines of the script : 
 
 ```
-#!/bin/bash                                                                                                        
+#!/bin/bash
 
 # a mandatory name to indentify your Gluster server       
 glusterName='glusterfs-cluster'   
@@ -40,12 +40,11 @@ glusterName='glusterfs-cluster'  
 # the IP where Kubernetes will mount your Gluster volume (for H/A use a shared IP) 
 glusterEP='192.168.42.42'         
 
-# the path of all nodes in your Gluster cluster (use just one in a single-node context) 
-glusterClusterPath='192.168.42.42:/gluster-pool 192.168.42.43:/gluster-pool'            
+# the path of all nodes in your Gluster cluster (use just one in a single-node context)
+glusterClusterPath='192.168.42.42:/gluster-pool 192.168.42.43:/gluster-pool' 
 
 # the path of the kubeconfig file 
-kubeConfigPath=/root/.kube/config                                                                                  
-                                      
+kubeConfigPath=/root/.kube/config
 ```
 
 ### Future
