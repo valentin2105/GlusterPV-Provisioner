@@ -14,6 +14,8 @@ jq
 kubectl
 glusterfs-server
 ```
+And a running GlusterFS cluster (or single node). You can follow this [link](http://banoffeepiserver.com/glusterfs/set-up-glusterfs-on-two-nodes.html) to achieve this point if you need a tutorial. 
+
 ### Installation
 
 ```
