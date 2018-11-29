@@ -27,7 +27,7 @@ journactl -u gluster-pv -f
 
 When the service run, simply install a Helm Chart the requiere some PVs, and GlusterPV-Provisioner will create them for you. 
 
-### Configuration
+### Configuration
 
 The configuration is in the first lines of the script : 
 
@@ -48,6 +48,6 @@ kubeConfigPath=/root/.kube/config                               �
                                       
 ```
 
-### Future
+### Future
 
-I'm currently working to rewrite this in Golang, if someone want help, it would be awesome. 
+I'm currently working to rewrite this in `Golang`, if someone want help, it would be awesome. 
